@@ -299,7 +299,7 @@ export default function WorkflowCategoryPage() {
       >
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-white/20 dark:bg-white/10 rounded-lg backdrop-blur-sm">
+            <div className="p-3 bg-background/50 dark:bg-background/30 rounded-lg backdrop-blur-sm border border-border/50">
               {config.icon}
             </div>
             <div>
@@ -312,7 +312,7 @@ export default function WorkflowCategoryPage() {
               size="sm"
               variant="secondary"
               onClick={() => setNewWorkflowOpen(true)}
-              className="bg-white text-gray-900 hover:bg-white/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:border-white/20"
+              className="bg-background text-foreground hover:bg-accent border-border"
             >
               <Plus className="h-4 w-4 mr-2" />
               New Workflow

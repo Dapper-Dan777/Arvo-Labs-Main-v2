@@ -225,10 +225,9 @@ function SortableStatCard({
           <div className="flex items-center justify-between mb-4">
             {isHighlight ? (
               <div
-                className="p-2 rounded-lg"
-                style={{ background: "rgba(255, 255, 255, 0.2)" }}
+                className="p-2 rounded-lg bg-primary/20"
               >
-                <Icon className="h-5 w-5 text-white" />
+                <Icon className="h-5 w-5 text-primary" />
               </div>
             ) : (
               <div
@@ -2387,13 +2386,13 @@ export function EnterpriseTeamDashboard() {
       {/* Quick Actions Toolbar */}
       {!isEditMode && (
         <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
-          <div className="bg-white dark:bg-background border border-border rounded-lg shadow-lg p-2 flex flex-col gap-2 backdrop-blur-sm">
+          <div className="bg-background border border-border rounded-lg shadow-lg p-2 flex flex-col gap-2 backdrop-blur-sm bg-background/95">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-white dark:bg-background hover:bg-gray-100 dark:hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
                   onClick={() => setTemplateDialogOpen(true)}
                   title="Template auswählen"
                 >
@@ -2407,7 +2406,7 @@ export function EnterpriseTeamDashboard() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-white dark:bg-background hover:bg-gray-100 dark:hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
                   onClick={toggleComparisonMode}
                   title="Vergleichsmodus"
                 >
@@ -2421,7 +2420,7 @@ export function EnterpriseTeamDashboard() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-white dark:bg-background hover:bg-gray-100 dark:hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
                   onClick={() => {
                     const pinnedArray = Array.from(pinnedItems);
                     if (pinnedArray.length === 0) {

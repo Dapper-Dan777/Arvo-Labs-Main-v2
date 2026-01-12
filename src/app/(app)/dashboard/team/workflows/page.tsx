@@ -84,7 +84,7 @@ export default function TeamWorkflowsPage() {
             >
               <CardHeader className={`bg-gradient-to-r ${category.color} text-white rounded-t-lg`}>
                 <div className="flex items-center justify-between">
-                  <div className="p-3 bg-white/20 rounded-lg">
+                  <div className="p-3 bg-background/50 dark:bg-background/30 rounded-lg border border-border/50">
                     <Icon className="h-6 w-6" />
                   </div>
                   <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
