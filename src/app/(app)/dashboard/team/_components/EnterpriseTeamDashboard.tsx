@@ -2386,13 +2386,13 @@ export function EnterpriseTeamDashboard() {
       {/* Quick Actions Toolbar */}
       {!isEditMode && (
         <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
-          <div className="bg-background border border-border rounded-lg shadow-lg p-2 flex flex-col gap-2 backdrop-blur-sm bg-background/95">
+          <div className="bg-card border border-border rounded-lg shadow-lg p-2 flex flex-col gap-2 backdrop-blur-sm">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-card hover:bg-accent border-border text-card-foreground"
                   onClick={() => setTemplateDialogOpen(true)}
                   title="Template auswählen"
                 >
@@ -2406,7 +2406,7 @@ export function EnterpriseTeamDashboard() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-card hover:bg-accent border-border text-card-foreground"
                   onClick={toggleComparisonMode}
                   title="Vergleichsmodus"
                 >
@@ -2420,7 +2420,7 @@ export function EnterpriseTeamDashboard() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-10 w-10 bg-background hover:bg-accent border-border text-foreground"
+                  className="h-10 w-10 bg-card hover:bg-accent border-border text-card-foreground"
                   onClick={() => {
                     const pinnedArray = Array.from(pinnedItems);
                     if (pinnedArray.length === 0) {
