@@ -18,6 +18,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@clerk/nextjs'],
   },
+  // TypeScript-Fehler während Build ignorieren (nur für Build, nicht für Entwicklung)
+  typescript: {
+    ignoreBuildErrors: false, // Wir wollen die Fehler sehen, aber vielleicht hilft es
+  },
   // Ignoriere Dashboard - Arvo Verzeichnis (Vite-Projekt, nicht Teil von Next.js)
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   // Path aliases are handled by tsconfig.json

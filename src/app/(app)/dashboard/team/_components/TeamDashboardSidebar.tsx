@@ -32,11 +32,10 @@ import {
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
+const Collapsible = CollapsiblePrimitive.Root;
+const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger;
+const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent;
 
 interface NavSubItem {
   id: string;
