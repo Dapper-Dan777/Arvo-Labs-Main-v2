@@ -279,10 +279,20 @@ declare module "@/components/ui/drawer" {
 }
 declare module "@/components/ui/dropdown-menu" {
   export const DropdownMenu: any;
+  export const DropdownMenuTrigger: any;
   export const DropdownMenuContent: any;
   export const DropdownMenuItem: any;
-  export const DropdownMenuTrigger: any;
+  export const DropdownMenuLabel: any;
   export const DropdownMenuSeparator: any;
+  export const DropdownMenuCheckboxItem: any;
+  export const DropdownMenuRadioItem: any;
+  export const DropdownMenuShortcut: any;
+  export const DropdownMenuGroup: any;
+  export const DropdownMenuPortal: any;
+  export const DropdownMenuSub: any;
+  export const DropdownMenuSubContent: any;
+  export const DropdownMenuSubTrigger: any;
+  export const DropdownMenuRadioGroup: any;
 }
 declare module "@/components/ui/form" {
   export const Form: any;
