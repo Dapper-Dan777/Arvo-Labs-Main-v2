@@ -279,6 +279,10 @@ declare module "@/components/ui/drawer" {
 }
 declare module "@/components/ui/dropdown-menu" {
   export const DropdownMenu: any;
+  export const DropdownMenuContent: any;
+  export const DropdownMenuItem: any;
+  export const DropdownMenuTrigger: any;
+  export const DropdownMenuSeparator: any;
 }
 declare module "@/components/ui/form" {
   export const Form: any;
