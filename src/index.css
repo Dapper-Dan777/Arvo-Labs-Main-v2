@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  :root.light {
+    /* Light Mode - Clean, Opux-inspired */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 240 5% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 90%;
+    --input: 240 5% 90%;
+    --ring: 240 5% 15%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(240 5% 15%), hsl(240 5% 25%));
+    --gradient-subtle: linear-gradient(180deg, hsl(240 5% 98%), hsl(0 0% 100%));
+    --shadow-soft: 0 4px 20px hsl(240 5% 15% / 0.08);
+    --shadow-card: 0 2px 12px hsl(240 5% 15% / 0.06);
+    
+    /* Sidebar Light */
+    --sidebar-background: 240 5% 98%;
+    --sidebar-foreground: 240 5% 45%;
+    --sidebar-primary: 240 5% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 5% 90%;
+    --sidebar-ring: 240 5% 15%;
+    
+    /* Arvo Custom Light */
+    --arvo-glow: 240 5% 15%;
+    --arvo-card-border: 240 5% 90%;
+    --arvo-text-muted: 240 5% 45%;
+
+    /* Card Animation Variables - Light */
+    --card-background-color: rgba(24, 24, 27, 0.015);
+    --card-border-color: rgba(24, 24, 27, 0.08);
+    --card-box-shadow-1: rgba(24, 24, 27, 0.02);
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-2: rgba(24, 24, 27, 0.04);
+    --card-box-shadow-2-y: 2px;
+    --card-box-shadow-2-blur: 7px;
+    --card-label-color: 240 10% 10%;
+    --card-icon-color: 240 10% 10%;
+    --card-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-icon-border-color: rgba(24, 24, 27, 0.1);
+    --card-shine-opacity: 0.3;
+    --card-shine-gradient: conic-gradient(from 225deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, #EDFAF6 285deg, #FFFFFF 345deg, rgba(16, 185, 129, 0) 360deg);
+    --card-line-color: #E9E9E7;
+    --card-tile-color: rgba(16, 185, 129, 0.08);
+    --card-hover-border-color: rgba(24, 24, 27, 0.15);
+    --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
+    --card-hover-box-shadow-1-y: 3px;
+    --card-hover-box-shadow-1-blur: 6px;
+    --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
+    --card-hover-box-shadow-2-y: 8px;
+    --card-hover-box-shadow-2-blur: 15px;
+    --card-hover-icon-color: 240 10% 10%;
+    --card-hover-icon-background-color: rgba(24, 24, 27, 0.04);
+    --card-hover-icon-border-color: rgba(24, 24, 27, 0.34);
+  }
+
+  :root.dark,
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 10% 6%;
+
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 240 6% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 0 0% 98%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 98%), hsl(240 5% 80%));
+    --gradient-subtle: linear-gradient(180deg, hsl(240 10% 8%), hsl(240 10% 6%));
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.2);
+    
+    /* Sidebar Dark */
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 240 5% 55%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 240 6% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 6% 18%;
+    --sidebar-ring: 0 0% 98%;
+    
+    /* Arvo Custom Dark */
+    --arvo-glow: 0 0% 98%;
+    --arvo-card-border: 240 6% 18%;
+    --arvo-text-muted: 240 5% 55%;
+
+    /* Card Animation Variables - Dark */
+    --card-background-color: rgba(255, 255, 255, 0.015);
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+    --card-box-shadow-2-y: 8px;
+    --card-box-shadow-2-blur: 15px;
+    --card-label-color: 0 0% 98%;
+    --card-icon-color: 212 6% 84%;
+    --card-icon-background-color: rgba(255, 255, 255, 0.08);
+    --card-icon-border-color: rgba(255, 255, 255, 0.12);
+    --card-shine-opacity: 0.1;
+    --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, rgba(52, 211, 153, 0.18) 295deg, rgba(16, 185, 129, 0) 360deg);
+    --card-line-color: #2A2B2C;
+    --card-tile-color: rgba(16, 185, 129, 0.05);
+    --card-hover-border-color: rgba(255, 255, 255, 0.2);
+    --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+    --card-hover-box-shadow-1-y: 5px;
+    --card-hover-box-shadow-1-blur: 10px;
+    --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+    --card-hover-box-shadow-2-y: 15px;
+    --card-hover-box-shadow-2-blur: 25px;
+    --card-hover-icon-color: #34D399;
+    --card-hover-icon-background-color: rgba(52, 211, 153, 0.1);
+    --card-hover-icon-border-color: rgba(52, 211, 153, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.light {
+    color-scheme: light;
+  }
+  
+  /* Sicherstellen, dass der Hintergrund immer gesetzt ist */
+  html,
+  html.dark {
+    background-color: hsl(var(--background));
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+  }
+  
+  #root {
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Arvo Glow Effects */
+  .arvo-glow {
+    box-shadow: 0 0 20px hsl(var(--arvo-glow) / 0.4),
+                0 0 40px hsl(var(--arvo-glow) / 0.2),
+                0 0 60px hsl(var(--arvo-glow) / 0.1);
+  }
+  
+  .arvo-glow-subtle {
+    box-shadow: 0 0 15px hsl(var(--arvo-glow) / 0.3),
+                0 0 30px hsl(var(--arvo-glow) / 0.15);
+  }
+  
+  .arvo-card {
+    @apply bg-card border border-border rounded-xl;
+  }
+  
+  .arvo-card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:arvo-glow-subtle;
+  }
+  
+  /* Sidebar Item Styles */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sidebar-foreground 
+           transition-all duration-200 cursor-pointer;
+  }
+  
+  .sidebar-item:hover {
+    @apply bg-sidebar-accent text-sidebar-accent-foreground;
+  }
+  
+  .sidebar-item-active {
+    @apply bg-primary text-primary-foreground arvo-glow;
+  }
+  
+  /* Glass Morphism */
+  .glass {
+    @apply bg-background/80 backdrop-blur-lg border-border;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+  
+  /* Safe Area for Mobile */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Card Animation Styles */
+.animated-card {
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+}
+
+.animated-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.animated-card .card-shine {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.animated-card .card-shine::before {
+  content: '';
+  width: 150%;
+  padding-bottom: 150%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 55%;
+  filter: blur(35px);
+  opacity: var(--card-shine-opacity);
+  transform: translateX(-50%);
+  background-image: var(--card-shine-gradient);
+}
+
+.animated-card .card-background {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+  mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+}
+
+.animated-card .card-background .tiles {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.animated-card .card-background .tile {
+  position: absolute;
+  background-color: var(--card-tile-color);
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.animated-card .card-background .tile.tile-4,
+.animated-card .card-background .tile.tile-6,
+.animated-card .card-background .tile.tile-10 {
+  animation-delay: -2s;
+}
+
+.animated-card .card-background .tile.tile-3,
+.animated-card .card-background .tile.tile-5,
+.animated-card .card-background .tile.tile-8 {
+  animation-delay: -4s;
+}
+
+.animated-card .card-background .tile.tile-2,
+.animated-card .card-background .tile.tile-9 {
+  animation-delay: -6s;
+}
+
+.animated-card .card-background .tile.tile-1 {
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 22.5%;
+}
+
+.animated-card .card-background .tile.tile-2 {
+  top: 0;
+  left: 22.5%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.animated-card .card-background .tile.tile-3 {
+  top: 0;
+  left: 50%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.animated-card .card-background .tile.tile-4 {
+  top: 0;
+  left: 77.5%;
+  height: 10%;
+  width: 22.5%;
+}
+
+.animated-card .card-background .tile.tile-5 {
+  top: 10%;
+  left: 0;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.animated-card .card-background .tile.tile-6 {
+  top: 10%;
+  left: 22.5%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.animated-card .card-background .tile.tile-7 {
+  top: 10%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.animated-card .card-background .tile.tile-8 {
+  top: 10%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.animated-card .card-background .tile.tile-9 {
+  top: 32.5%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.animated-card .card-background .tile.tile-10 {
+  top: 32.5%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+@keyframes tile {
+  0%, 12.5%, 100% {
+    opacity: 1;
+  }
+  25%, 82.5% {
+    opacity: 0;
+  }
+}
+
+.animated-card .card-background .line {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.animated-card .card-background .line::before,
+.animated-card .card-background .line::after {
+  content: '';
+  position: absolute;
+  background-color: var(--card-line-color);
+  transition: transform 0.35s;
+}
+
+.animated-card .card-background .line::before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.animated-card .card-background .line::after {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+
+.animated-card .card-background .line.line-1::before {
+  top: 10%;
+}
+
+.animated-card .card-background .line.line-1::after {
+  left: 22.5%;
+}
+
+.animated-card .card-background .line.line-1::before,
+.animated-card .card-background .line.line-1::after {
+  transition-delay: 0.3s;
+}
+
+.animated-card .card-background .line.line-2::before {
+  top: 32.5%;
+}
+
+.animated-card .card-background .line.line-2::after {
+  left: 50%;
+}
+
+.animated-card .card-background .line.line-2::before,
+.animated-card .card-background .line.line-2::after {
+  transition-delay: 0.15s;
+}
+
+.animated-card .card-background .line.line-3::before {
+  top: 55%;
+}
+
+.animated-card .card-background .line.line-3::after {
+  right: 22.5%;
+}
+
+.animated-card:hover {
+  box-shadow: 0px 3px 6px var(--card-hover-box-shadow-1), 
+              0px var(--card-hover-box-shadow-2-y) var(--card-hover-box-shadow-2-blur) var(--card-hover-box-shadow-2), 
+              0 0 0 1px var(--card-hover-border-color);
+}
+
+.animated-card:hover .card-shine {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+.animated-card:hover .card-background .tiles {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.animated-card:hover .card-background .tiles .tile {
+  animation-name: tile;
+}
+
+.animated-card:hover .card-background .line {
+  opacity: 1;
+  transition-duration: 0.15s;
+}
+
+.animated-card:hover .card-background .line::before {
+  transform: scaleX(1);
+}
+
+.animated-card:hover .card-background .line::after {
+  transform: scaleY(1);
+}
+
+.animated-card:hover .card-background .line.line-1::before,
+.animated-card:hover .card-background .line.line-1::after {
+  transition-delay: 0s;
+}
+
+.animated-card:hover .card-background .line.line-2::before,
+.animated-card:hover .card-background .line.line-2::after {
+  transition-delay: 0.15s;
+}
+
+.animated-card:hover .card-background .line.line-3::before,
+.animated-card:hover .card-background .line.line-3::after {
+  transition-delay: 0.3s;
+}
+
+.animated-card .card-icon {
+  z-index: 2;
+  position: relative;
+  display: inline-flex;
+}
+
+.animated-card .card-icon::after {
+  content: '';
+  position: absolute;
+  inset: 4.5px;
+  border-radius: 50%;
+  background-color: var(--card-icon-background-color);
+  border: 1px solid var(--card-icon-border-color);
+  backdrop-filter: blur(2px);
+  transition: background-color 0.25s, border-color 0.25s;
+  pointer-events: none;
+}
+
+.animated-card .card-icon svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translateZ(0);
+  color: hsl(var(--card-icon-color));
+  transition: color 0.25s;
+}
+
+.animated-card:hover .card-icon::after {
+  background-color: var(--card-hover-icon-background-color);
+  border-color: var(--card-hover-icon-border-color);
+}
+
+.animated-card:hover .card-icon svg {
+  color: var(--card-hover-icon-color);
+}
+
+.animated-card .card-content {
+  z-index: 2;
+  position: relative;
+}
