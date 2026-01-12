@@ -844,7 +844,7 @@ export function TeamDashboardHeader({
                 borderColor: 'var(--color-border-default)',
               }}
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
               onFocus={() => setCommandOpen(true)}
             />
             <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 text-xs" style={{ color: 'var(--color-text-secondary)' }}>
